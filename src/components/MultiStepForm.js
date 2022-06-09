@@ -7,6 +7,10 @@ function renderHiddenElement(Component) {
 }
 
 export default function MultiStepForm(props) {
+
+  styles.stepperContainer.paddingLeft = props.centering
+  styles.stepperContainer.paddingRight = props.centering
+
   return (
     <div style={styles.container}>
       <div style={styles.stepperContainer}>
@@ -49,6 +53,8 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    marginBottom: 40
+    marginBottom: 40,
+    paddingLeft: 0,
+    paddingRight: 0
   }
 }
