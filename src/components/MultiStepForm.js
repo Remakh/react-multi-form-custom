@@ -15,16 +15,17 @@ export default function MultiStepForm(props) {
         if (i === Children.count(props.children) - 1)
         return (
           <Fragment>
-              <Pill active={props.activeStep === (i+1)} label={child.props.label}
+              <Pill active={props.activeStep === (i+1)} pillSize={props.pillSize} label={child.props.label}
                 complete={props.activeStep > i+1}
-                accentColor={props.accentColor}/>
+                accentColor={props.accentColor}
+                inactiveColor={props.inactiveColor}/>
             </Fragment>
           )
           
           return (
             <Fragment>
-            <Pill active={props.activeStep === (i+1)} complete={(props.activeStep > 1) && ((i+1) < props.activeStep)}
-              label={child.props.label} accentColor={props.accentColor}/>
+            <Pill active={props.activeStep === (i+1)} pillSize={props.pillSize} complete={(props.activeStep > 1) && ((i+1) < props.activeStep)}
+              label={child.props.label} accentColor={props.accentColor} inactiveColor={props.inactiveColor}/>
             <Line complete={(props.activeStep > 1) && ((i+1) < props.activeStep)}
               accentColor={props.accentColor}/>
           
