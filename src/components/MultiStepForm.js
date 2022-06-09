@@ -6,7 +6,20 @@ function renderHiddenElement(Component) {
   return <Component {...Component.props} style={{ ...Component.props.style, display: 'none'}}/>
 }
 
+
+
 export default function MultiStepForm(props) {
+  
+  const styles = {
+    stepperContainer: {
+      display: 'flex',
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+      marginBottom: 40,
+      paddingLeft: 0,
+      paddingRight: 0
+    }
+  }
 
   styles.stepperContainer.paddingLeft = props.centering
   styles.stepperContainer.paddingRight = props.centering
@@ -25,7 +38,7 @@ export default function MultiStepForm(props) {
                 inactiveColor={props.inactiveColor}/>
             </Fragment>
           )
-          
+      
           return (
             <Fragment>
             <Pill active={props.activeStep === (i+1)} pillSize={props.pillSize} complete={(props.activeStep > 1) && ((i+1) < props.activeStep)}
@@ -48,13 +61,4 @@ export default function MultiStepForm(props) {
   )
 }
 
-const styles = {
-  stepperContainer: {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-    marginBottom: 40,
-    paddingLeft: 0,
-    paddingRight: 0
-  }
-}
+
