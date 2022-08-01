@@ -7,7 +7,7 @@ const Line = styled.div`
   transition: all 0.4s;
 
   ${props => props.complete && css`
-    background-color: ${props => props.accentColor || '#24a19c'};
+    background-color: ${props => props.accentColor || '#70b88f'};
     height: ${props => props.lineHeight || '10px'};
   `}
 `
