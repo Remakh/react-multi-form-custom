@@ -28,7 +28,7 @@ const Pill = styled.div`
   
     width: ${props => props.pillSize}px;
     height: ${props => props.pillSize}px;
-    background-color: ${props.accentColor || '#24a19c'};
+    background-color: ${props.accentColor || '#70b88f'};
     color: #FFF;
 
   `}
@@ -36,7 +36,7 @@ const Pill = styled.div`
   ${props => props.complete && css`
     width: 20px;
     height: 20px;
-    background-color: ${props.accentColor || '#24a19c'};
+    background-color: ${props.accentColor || '#70b88f'};
     
     &:before {
       position: absolute;
